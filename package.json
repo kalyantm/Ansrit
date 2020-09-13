@@ -9,21 +9,22 @@
     "build": "gatsby build"
   },
   "dependencies": {
+    "antd": "^4.5.4",
     "gatsby": "^2.18.18",
+    "gatsby-plugin-antd": "^2.2.0",
+    "gatsby-plugin-less": "^3.0.20",
     "gatsby-theme-codebushi": "1.0.0",
+    "less": "^3.11.1",
     "react": "^16.12.0",
     "react-anchor-link-smooth-scroll": "^1.0.12",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "react-slick": "^0.27.10",
+    "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
-    "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.9.0",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-react-hooks": "^2.3.0",
-    "eslint-config-airbnb": "^18.0.1",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-jsx-a11y": "^6.2.3",
-    "eslint-plugin-react": "^7.17.0",
-    "prettier": "^1.19.1"
+    "css-loader": "3.4.2",
+    "less-loader": "^5.0.0",
+    "prettier": "^1.19.1",
+    "style-loader": "^1.1.3"
   }
 }

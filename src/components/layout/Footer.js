@@ -1,39 +1,38 @@
 import React from 'react';
 
+const SOCIAL = [
+  // TODO: When we hookup social media in the future
+  // {
+  //   icon: GithubIcon,
+  //   link: 'https://github.com/ajayns/gatsby-absurd',
+  // },
+  // {
+  //   icon: InstagramIcon,
+  //   link: 'https://instagram.com/ajay_ns',
+  // },
+  // {
+  //   icon: TwitterIcon,
+  //   link: 'https://twitter.com/ajayns08',
+  // },
+];
+
 const Footer = () => (
-  <footer className="container mx-auto py-16 px-3 mt-48 mb-8 text-gray-800">
-    <div className="flex -mx-3">
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">About Us</h2>
-        <p className="mt-5">Ridiculus mus mauris vitae ultricies leo integer malesuada nunc.</p>
-      </div>
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Important Links</h2>
-        <ul className="mt-4 leading-loose">
-          <li>
-            <a href="https://codebushi.com">Terms &amp; Conditions</a>
-          </li>
-          <li>
-            <a href="https://codebushi.com">Privacy Policy</a>
-          </li>
-        </ul>
-      </div>
-      <div className="flex-1 px-3">
-        <h2 className="text-lg font-semibold">Social Media</h2>
-        <ul className="mt-4 leading-loose">
-          <li>
-            <a href="https://dev.to/changoman">Dev.to</a>
-          </li>
-          <li>
-            <a href="https://twitter.com/HuntaroSan">Twitter</a>
-          </li>
-          <li>
-            <a href="https://github.com/codebushi/gatsby-starter-lander">GitHub</a>
-          </li>
-        </ul>
+  <>
+    <div className="background:white shadow-nav container mx-auto lg:pt-40 pt-20">
+      <div className="flex justify-between items-center">
+        <div className="color:black">
+          <h2 className="text-2xl">AnsrIT Solutions</h2>
+          <span>Copyright © 2020 Company Inc. All rights reserved.</span>
+        </div>
+        <div className="flex">
+          {SOCIAL.map(({ icon, link }) => (
+            <a key={link} href={link}>
+              <img className="mx-0 my-4" src={icon} alt="link" />
+            </a>
+          ))}
+        </div>
       </div>
     </div>
-  </footer>
+  </>
 );
-
 export default Footer;
