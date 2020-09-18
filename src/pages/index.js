@@ -8,6 +8,10 @@ import services from '../images/services.jpg';
 import erm from '../images/erm.jpg';
 import projectMgmt from '../images/project-management.jpg';
 import industry from '../images/industry.jpg';
+import amazonBg from '../images/aws-bg.jpg';
+import googleBg from '../images/google-bg.jpg';
+import oracleBg from '../images/oracle-bg.jpg';
+import azureBg from '../images/azure-bg.jpg';
 
 import TrainingCard from '../components/TrainingCard';
 
@@ -19,15 +23,15 @@ import ContactForm from '../components/layout/Form';
 export default () => {
   return (
     <Layout>
-      <section className="pt-20 md:pt-40 h-screen">
+      <section className="pt-20 pb-20 lg:pt-40 lg:h-screen">
         <div className="container mx-auto px-8 lg:flex">
           <div className="text-center lg:text-left lg:w-1/2">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold leading-none">
               We help companies embrace the new digitalization trends.
             </h1>
             <p className="text-xl lg:text-2xl mt-12 font-light">
-              Focus on delivering core business features to the users. We will get the other parts
-              of your business right.
+              You can focus on delivering your core business. We will get the other parts of your
+              business right
             </p>
             <div className="mt-6 lg:mt-3">
               <a href="#contact">
@@ -45,9 +49,9 @@ export default () => {
           <div className="lg:w-2/3 mb-8">
             <h2 className="text-4xl font-semibold text-center lg:text-left">Who We Are</h2>
             <p className="lg:w-4/5 text-xl text-center lg:text-left">
-              A team of of seasoned IT veterans who have delivered enterprise level projects valued
-              at multimillion USD across various industry verticals. Now, we want to help you reach
-              the top.
+              A team of seasoned IT professionals specializing in various domains who have delivered
+              enterprise level global projects valued at multimillion USD across various industry
+              verticals.
             </p>
           </div>
           <div className="lg:w-1/3 flex justify-center lg:block">
@@ -63,22 +67,22 @@ export default () => {
             <p className="lg:w-4/5 text-xl text-center lg:text-left">
               Our consultancy services are fully geared up to provide support in outsourced program
               delivery and digital transformation. We want to help you setup the best in class IT
-              platform to take it to the next level.
+              platform and take it to the next level.
             </p>
           </div>
         </div>
       </section>
 
-      <section id="services" className="lg:pt-40 pt-20">
-        <div className="container mx-auto text-center">
+      <section id="services" className="lg:mt-40 mt-20">
+        <div className="container mx-auto text-center lg:pt-10 sm:pt-5 lg:pb-10 sm:pb-5">
           <h2 className="text-4xl font-semibold">Our Services</h2>
           <span className="mb-8 text-xl text-gray-600 text-center">
             Professional services that help your business reach the next level.
           </span>
-          <div className="mt-12 mb-8 flex flex-col md:flex-row md:-mx-3">
+          <div className="mt-12 mb-8 flex flex-col lg:flex-row lg:-mx-3">
             <div className="flex-1 px-3 flex-col">
               <div className="flex justify-center">
-                <img src={erm} width={100} height={100} />
+                <img src={erm} style={{ maxWidth: 100, maxHeight: 100 }} />
               </div>
               <h3 className="font-semibold text-xl">Enterprise Risk Management</h3>
               <p className="text-lg mt-2 font-light">
@@ -90,7 +94,12 @@ export default () => {
 
             <div className="flex-1 px-3 flex-col">
               <div className="flex justify-center">
-                <img src={projectMgmt} width={100} height={100} />
+                <img
+                  src={projectMgmt}
+                  width={100}
+                  height={100}
+                  style={{ maxWidth: 100, maxHeight: 100 }}
+                />
               </div>
               <h3 className="font-semibold text-xl">Practical Project Management</h3>
               <p className="text-lg mt-2 font-light">
@@ -101,7 +110,12 @@ export default () => {
 
             <div className="flex-1 px-3 flex-col">
               <div className="flex justify-center">
-                <img src={services} width={100} height={100} />
+                <img
+                  src={services}
+                  width={100}
+                  height={100}
+                  style={{ maxWidth: 100, maxHeight: 100 }}
+                />
               </div>
               <h3 className="font-semibold text-xl">IT Services</h3>
               <p className="text-lg mt-2 font-light">
@@ -113,7 +127,12 @@ export default () => {
 
             <div className="flex-1 px-3">
               <div className="flex justify-center">
-                <img src={industry} width={100} height={100} />
+                <img
+                  src={industry}
+                  width={100}
+                  height={100}
+                  style={{ maxWidth: 100, maxHeight: 100 }}
+                />
               </div>
               <h3 className="font-semibold text-xl">Industry Connect</h3>
               <p className="text-lg mt-2 font-light">
@@ -133,13 +152,14 @@ export default () => {
           </span>
         </div>
         <div
-          className="flex flex-col sm:flex-row sm:-mx-3 mt-12"
+          className="flex flex-col xl:flex-row xl:-mx-3 mt-12"
           style={{
             boxShadow: 'rgba(0, 0, 0, 0.08) 10px 0px 5px -5px'
           }}
         >
           <TrainingCard
             title="Amazon Web Services"
+            bg={amazonBg}
             primaryContent={
               <>
                 <span>
@@ -158,7 +178,7 @@ export default () => {
               <div className="flex flex-col">
                 <div className="py-4">
                   <p className="font-bold ">AWS Solutions Architect</p>
-                  <p className="font-light ">
+                  <p>
                     Delve into the internals of AWS from the basics to the advanced. Master key AWS
                     Concepts, like EC2, IAM, VPC, Route 53, S3, Deployment, Troubleshooting and
                     Disaster Recovery on their massive infrastructure.
@@ -187,6 +207,7 @@ export default () => {
 
           <TrainingCard
             title="Microsoft Azure"
+            bg={azureBg}
             primaryContent={
               <>
                 <span>
@@ -206,7 +227,7 @@ export default () => {
               <div className="flex flex-col">
                 <div className="py-4">
                   <p className="font-bold ">Azure Fundamentals</p>
-                  <p className="font-light ">
+                  <p>
                     Learn about foundational knowledge of cloud services and how Azure provides
                     those services. Get to know the basics of cloud buzzwords: Network, Storage,
                     Compute, App Development and many more!
@@ -227,6 +248,7 @@ export default () => {
 
           <TrainingCard
             title="Google Cloud"
+            bg={googleBg}
             primaryContent={
               <>
                 <span>
@@ -246,7 +268,7 @@ export default () => {
               <div className="flex flex-col">
                 <div className="py-4">
                   <p className="font-bold ">Associate Cloud Engineer</p>
-                  <p className="font-light ">
+                  <p>
                     Learn the latest techniques about how to deploy, monitor and manage enterprise
                     level solutions, by setting up a cloud environment, configure access and ensure
                     successful operation of cloud based solutions.
@@ -267,6 +289,7 @@ export default () => {
 
           <TrainingCard
             title="Oracle Cloud"
+            bg={oracleBg}
             primaryContent={
               <>
                 <span>
@@ -286,7 +309,7 @@ export default () => {
               <div className="flex flex-col">
                 <div className="py-4">
                   <p className="font-bold ">Oracle Cloud Infrastucture - Certified Associate </p>
-                  <p className="font-light ">
+                  <p>
                     Learn basic cloud practices offered by the Oracle cloud like storage,
                     networking, database, security and integration to get certified and be in the
                     best position to expand your horizons to all that the Oracle cloud has to offer.
@@ -308,24 +331,24 @@ export default () => {
         </div>
       </section>
 
-      <section id="services" className="pt-20 lg:pt-40">
+      <section id="services" className="mt-20 lg:mt-40">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-semibold">Testimonials</h2>
           <span className="mb-8 text-xl text-gray-600 text-center">
             Listen to what our clients have to say
           </span>
-          <div className="py-4 flex flex-col md:flex-row md:-mx-3">
+          <div className="py-4 flex flex-col lg:flex-row lg:-mx-3">
             <Testimonials />
           </div>
         </div>
       </section>
 
-      <section id="contact" className="pt-20 lg:pt-40 lg:p-8 p-0">
+      <section id="contact" className="mt-20 pt-5 lg:mt-40 lg:pt-10 pb-5 lg:pb-20 m-0 bg-section">
         <div className="container mx-auto text-center">
           <h2 className="text-4xl font-semibold">Contact Us</h2>
         </div>
         <span className="mb-8 text-xl text-gray-600  text-center flex justify-center">
-          Drop us a line. We will get back to you as soon as possible.
+          Please drop us a line. We will get back to you as soon as possible.
         </span>
 
         <div className="px-8 mx-auto container">

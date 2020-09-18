@@ -66,7 +66,10 @@ const ContactForm = () => {
 
   return (
     <div id="contact-us" accent>
-      <div className="lg:w-2/3 mx-auto rounded bg-white p-6 shadow-form">
+      <div
+        className="lg:w-2/3 mx-auto rounded bg-white p-6 shadow-form"
+        style={{ background: '#fff' }}
+      >
         <Form
           name="contact-us-form"
           method="post"

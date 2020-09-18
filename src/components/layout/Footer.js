@@ -18,7 +18,7 @@ const SOCIAL = [
 
 const Footer = () => (
   <>
-    <div className="background:white shadow-nav container mx-auto lg:pt-40 pt-20">
+    <div className="background:white shadow-nav container mx-auto lg:pt-40 pt-20 pb-20">
       <div className="flex justify-between items-center">
         <div className="color:black">
           <h2 className="text-2xl">AnsrIT Solutions</h2>

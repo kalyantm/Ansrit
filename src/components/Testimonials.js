@@ -5,8 +5,9 @@ import '../../node_modules/slick-carousel/slick/slick.css';
 import '../../node_modules/slick-carousel/slick/slick-theme.css';
 import { ArrowLeftOutlined, ArrowRightOutlined } from '@ant-design/icons';
 
+const herman = require('../images/herman.jpg');
 const senthil = require('../images/senthilnathan.jpg');
-const rajeev = require('../images/chandra.jpg');
+const rajeev = require('../images/rajeev.jpg');
 const chandra = require('../images/chandra.jpg');
 const sampath = require('../images/sampath.jpg');
 const deepak = require('../images/deepak.jpg');
@@ -56,6 +57,24 @@ const Testimonials = () => (
       }}
     >
       <Carousel style={{ display: 'flex', overflow: 'hidden' }} effect="fade" {...settings}>
+        <div>
+          <Card bodyStyle={cardBodyStyle} bordered={false}>
+            <Meta
+              avatar={<Avatar src={herman} size={64} />}
+              title={'Hermann Ndengue'}
+              description={'AWS Solutions Architect | Oracle EBS Applications | Financial Analyst'}
+              style={{ textAlign: 'initial' }}
+            />
+            <div className="mt-4">
+              <blockquote className="text-left">
+                I attended Rangar's AWS Solutions Architecture classes in December 2018. Ranga is
+                very professional and knowledgeable. I have learned a lot throughout the session and
+                thanks to him, I cleared the exam back in February. Thanks for everything sir.
+                Kudos!!
+              </blockquote>
+            </div>
+          </Card>
+        </div>
         <div>
           <Card bodyStyle={cardBodyStyle} bordered={false}>
             <Meta

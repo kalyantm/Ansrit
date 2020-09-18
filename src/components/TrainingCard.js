@@ -4,16 +4,19 @@ import Card from './Card';
 import { DownOutlined, UpOutlined } from '@ant-design/icons';
 import { Divider } from 'antd';
 
-export default function TrainingCard({ title, primaryContent, secondaryContent }) {
+export default function TrainingCard({ title, primaryContent, secondaryContent, bg }) {
   const [initialContent, setInitialContent] = React.useState(true);
   return (
     <div
       onMouseEnter={() => setInitialContent(false)}
       onMouseLeave={() => setInitialContent(true)}
       onClick={() => setInitialContent(prevContent => !prevContent)}
-      className="flex-1 lg:mb-0 mb-10 shadow-nav lg:shadow-training-lg border-none flex flex-col items-center"
+      className="flex-1 lg:mb-0 shadow-nav lg:shadow-training-lg border-none flex flex-col items-center"
       style={{
-        height: 600
+        color: '#f3f6f5',
+        height: 700,
+        backgroundImage: `url(${bg})`,
+        opacity: 0.8
       }}
     >
       <Card
@@ -32,7 +35,7 @@ export default function TrainingCard({ title, primaryContent, secondaryContent }
           {initialContent ? <DownOutlined /> : <UpOutlined />}
         </div>
 
-        <Divider style={{ margin: '12px 0px', borderColor: 'rgba(0,0,0,0.1)' }} />
+        <Divider style={{ margin: '12px 0px', borderColor: '#f3f6f5' }} />
         {initialContent ? primaryContent : secondaryContent}
       </Card>
     </div>
