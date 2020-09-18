@@ -1,15 +1,13 @@
 {
-  "name": "gatsby-starter-lander",
-  "author": "Hunter Chang",
-  "repository": "https://github.com/codebushi/gatsby-starter-lander",
-  "version": "1.0.0",
-  "license": "MIT",
+  "name": "ansrit",
+  "author": "AnsrIT Solutions",
   "scripts": {
     "develop": "gatsby develop",
     "build": "gatsby build"
   },
   "dependencies": {
     "antd": "^4.5.4",
+    "axios": "^0.20.0",
     "gatsby": "^2.18.18",
     "gatsby-plugin-antd": "^2.2.0",
     "gatsby-plugin-less": "^3.0.20",

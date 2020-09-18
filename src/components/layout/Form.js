@@ -21,7 +21,6 @@ const ContactForm = () => {
   });
   const [showAlert, setShowAlert] = React.useState(false);
   const [alertMessage, setAlertMessage] = React.useState('');
-  const [alertType, setAlertType] = React.useState('');
 
   function encode(data) {
     return Object.keys(data)
@@ -34,7 +33,7 @@ const ContactForm = () => {
   };
 
   const handleSelectChange = value => {
-    setFormState({ ...formState, course: value });
+    setFormState({ ...formState, service: value });
   };
 
   const handleSubmit = values => {
@@ -53,13 +52,11 @@ const ContactForm = () => {
       .then(() => {
         setShowAlert(true);
         setAlertMessage('Thank you for submitting your details. We will get in touch soon!');
-        setAlertType('success');
         setFormState({ name: '', message: '', email: '', phone: '' });
       })
       .catch(() => {
         setShowAlert(true);
         setAlertMessage('Oops, something went wrong. Please try again later');
-        setAlertType('error');
       });
   };
   console.log('form state', formState);
@@ -145,10 +142,10 @@ const ContactForm = () => {
                 placeholder={<span style={{ width: '100%' }}>Select a service</span>}
                 size={'large'}
               >
-                <Option style={{ width: '100%' }} value="aws_solutions_architect">
+                <Option style={{ width: '100%' }} value="services">
                   Services
                 </Option>
-                <Option value="aws_cloud_practitioner">Cloud Training</Option>
+                <Option value="training">Cloud Training</Option>
               </Select>
             </Form.Item>
           </div>
@@ -166,9 +163,7 @@ const ContactForm = () => {
             </Form.Item>
           </div>
 
-          {showAlert ? (
-            <Alert message={alertMessage} type={alertType} showIcon banner closable />
-          ) : null}
+          {showAlert ? <div>{alertMessage}</div> : null}
           <div className="my-6">
             <Form.Item>
               <Button
